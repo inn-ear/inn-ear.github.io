@@ -151,7 +151,7 @@ h4{font-size:var(--fs-3);letter-spacing:-.01em}
 .field{display:grid;gap:.45rem}
 .field-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
 .field-label{font-weight:600;font-size:var(--fs-1)}
-.field-value{font-variant-numeric:tabular-nums;font-weight:600;font-size:var(--fs-1);color:var(--ink-2)}
+.field-value{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600;font-size:var(--fs-1);color:var(--ink-2)}
 .lab .field-value{color:var(--lab-text)}
 .field-hint{font-size:var(--fs-0);color:var(--muted);margin:0}
 .lab .field-hint{color:var(--lab-muted)}
@@ -565,6 +565,7 @@ a,button,input,label,.anat-part,canvas{touch-action:manipulation}
 .noscript{margin:3rem auto;max-width:40rem;padding:1.2rem 1.4rem;border-radius:12px;background:#fff;border:1px solid var(--rule);font-size:1rem;line-height:1.6}
 .br-canvas{height:380px}
 @media (max-width:600px){.br-canvas{height:440px}}
+.readout-sub{display:block;font-size:var(--fs-0);color:var(--lab-muted);margin-top:.1rem}
 
 </style>
 </head>
@@ -1439,6 +1440,19 @@ Object.assign(I18N.dicts.de, {
 "Accurate to about 100 Hz.": "Genau auf etwa 100 Hz.",
 "Not available": "Nicht verfügbar",
 "The microphone could not be opened. Check that your browser has permission to use it. On phones the microphone usually only works when the page is opened from a web address, not from a file.": "Das Mikrofon konnte nicht geöffnet werden. Prüfen Sie, ob Ihr Browser es verwenden darf. Auf Handys funktioniert das Mikrofon meist nur, wenn die Seite über eine Webadresse geöffnet wird, nicht als Datei.",
+"Outer hair cell damage": "Schaden an äußeren Haarzellen",
+"Inner hair cell damage": "Schaden an inneren Haarzellen",
+"Inner hair cell damage<small>splayed hairs and broken tip links</small>": "Schaden an inneren Haarzellen<small>gespreizte Härchen und gerissene Tip-Links</small>",
+"Outer hair cell boost": "Verstärkung der äußeren Haarzellen",
+"Boost by sound level": "Verstärkung nach Lautstärke",
+"damaged: weak boost": "geschädigt: schwache Verstärkung",
+"waiting for sound": "wartet auf Schall",
+"working hard for a soft sound": "arbeitet hart für einen leisen Ton",
+"adding a medium boost": "verstärkt mittelstark",
+"loud sound: barely needed": "lauter Ton: kaum nötig",
+"Try a soft sound, then raise the outer hair cell damage: the inner hair cell stops responding. Loud sounds still get through, because they barely need the boost. The motion is slowed down about 1,000 times; in a real ear this happens up to 20,000 times a second.": "Wählen Sie einen leisen Ton und erhöhen Sie dann den Schaden an den äußeren Haarzellen: Die innere Haarzelle reagiert nicht mehr. Laute Töne kommen weiterhin durch, weil sie die Verstärkung kaum brauchen. Die Bewegung ist etwa 1.000-fach verlangsamt; in einem echten Ohr passiert das bis zu 20.000-mal pro Sekunde.",
+"About 12,000 in three rows. They stretch and shrink in time with the sound, pumping energy back into the membrane. They give the quietest sounds a boost of up to 50 dB but add almost nothing to loud sounds, which squeezes a huge range of loudness into what the inner hair cells can handle.": "Etwa 12.000 in drei Reihen. Sie strecken und stauchen sich im Takt des Schalls und pumpen Energie zurück in die Membran. Den leisesten Tönen geben sie bis zu 50 dB Verstärkung, lauten Tönen fast keine. So passt ein riesiger Lautstärkebereich in das, was die inneren Haarzellen verarbeiten können.",
+"Three rows of amplifiers. They pump energy into the ripple so soft sounds become big enough to detect, which is why they light up most for quiet sounds and step back for loud ones. Lose them and quiet sounds vanish.": "Drei Reihen von Verstärkern. Sie pumpen Energie in die Welle, damit leise Töne groß genug werden, um erkannt zu werden. Deshalb leuchten sie bei leisen Tönen am stärksten und treten bei lauten zurück. Fehlen sie, verschwinden leise Klänge.",
 "Listen carefully": "Hören Sie genau hin",
 "Playing three short beeps": "Drei kurze Pieptöne werden gespielt",
 "Did you hear the beeps?": "Haben Sie die Pieptöne gehört?",
@@ -1954,7 +1968,7 @@ Object.assign(I18N.dicts.it, {
 "Loading…": "Caricamento…",
 "Can’t read file": "File non leggibile",
 "The microphone could not be opened. Check that your browser has permission to use it.": "Impossibile aprire il microfono. Controlla che il browser abbia il permesso di usarlo.",
-"soft": "basso",
+"soft": "debole",
 "normal": "normale",
 "loud": "forte",
 "Moderately severe loss": "Ipoacusia moderatamente grave",
@@ -2117,6 +2131,19 @@ Object.assign(I18N.dicts.it, {
 "Accurate to about 100 Hz.": "Precisione di circa 100 Hz.",
 "Not available": "Non disponibile",
 "The microphone could not be opened. Check that your browser has permission to use it. On phones the microphone usually only works when the page is opened from a web address, not from a file.": "Impossibile aprire il microfono. Controlla che il browser abbia il permesso di usarlo. Sui telefoni il microfono di solito funziona solo se la pagina è aperta da un indirizzo web, non da un file.",
+"Outer hair cell damage": "Danno alle cellule ciliate esterne",
+"Inner hair cell damage": "Danno alle cellule ciliate interne",
+"Inner hair cell damage<small>splayed hairs and broken tip links</small>": "Danno alle cellule ciliate interne<small>ciglia scompigliate e tip link spezzati</small>",
+"Outer hair cell boost": "Guadagno delle cellule ciliate esterne",
+"Boost by sound level": "Guadagno per livello sonoro",
+"damaged: weak boost": "danneggiata: guadagno debole",
+"waiting for sound": "in attesa di un suono",
+"working hard for a soft sound": "lavora sodo per un suono debole",
+"adding a medium boost": "aggiunge un guadagno medio",
+"loud sound: barely needed": "suono forte: quasi non serve",
+"Try a soft sound, then raise the outer hair cell damage: the inner hair cell stops responding. Loud sounds still get through, because they barely need the boost. The motion is slowed down about 1,000 times; in a real ear this happens up to 20,000 times a second.": "Prova un suono debole, poi aumenta il danno alle cellule ciliate esterne: la cellula ciliata interna smette di rispondere. I suoni forti passano ancora, perché del guadagno quasi non hanno bisogno. Il movimento è rallentato di circa 1.000 volte; in un orecchio vero avviene fino a 20.000 volte al secondo.",
+"About 12,000 in three rows. They stretch and shrink in time with the sound, pumping energy back into the membrane. They give the quietest sounds a boost of up to 50 dB but add almost nothing to loud sounds, which squeezes a huge range of loudness into what the inner hair cells can handle.": "Circa 12.000 in tre file. Si allungano e si accorciano a tempo con il suono, restituendo energia alla membrana. Ai suoni più deboli danno fino a 50 dB di guadagno, a quelli forti quasi nulla: così un’enorme gamma di volumi entra in ciò che le cellule ciliate interne riescono a gestire.",
+"Three rows of amplifiers. They pump energy into the ripple so soft sounds become big enough to detect, which is why they light up most for quiet sounds and step back for loud ones. Lose them and quiet sounds vanish.": "Tre file di amplificatori. Pompano energia nell’onda così i suoni deboli diventano abbastanza grandi da essere rilevati: per questo si accendono di più con i suoni deboli e si fanno da parte con quelli forti. Se mancano, i suoni deboli svaniscono.",
 "Listen carefully": "Ascolta con attenzione",
 "Playing three short beeps": "Tre brevi bip in riproduzione",
 "Did you hear the beeps?": "Hai sentito i bip?",
@@ -2974,8 +3001,10 @@ function SignalPath(canvas, opts = {}) {
       const t = {};
       t.sound = clamp((s - 12) / 70);
       t.dev = m.dev === 'aid' ? (s > 1 ? g / 50 : 0) : 0;
-      t.bm = clamp((sa - thr - (1 - oh) * 40) / 70);
-      t.ohc = oh * clamp((sa - thr) / 60);
+      // outer hair cells: compressive amplifier, most boost for soft sounds, almost none for loud ones
+      const sl = sa - thr, gainFrac = 1 / (1 + Math.exp((sl - 35) / 11));
+      t.bm = clamp((sl - (1 - oh) * 45 * gainFrac) / 70);
+      t.ohc = s > 1 ? oh * clamp((sl + 5) / 15) * gainFrac : 0;
       const heard = sa - thr - loss;
       t.ihc = ih > 0.03 ? clamp(heard / 55) : 0;
       t.nerve = t.ihc * clamp(sy / Math.max(ih, 0.05));
@@ -4268,21 +4297,26 @@ Pages['learn/haircells'] = (main) => {
         <div class="mini-controls">
           <div class="field" id="hcLevelF">
             <div class="field-head"><span class="field-label">Sound level</span><span class="field-value" id="hcLv">moderate</span></div>
-            <input type="range" id="hcL" min="0" max="100" value="55" aria-label="Sound level">
+            <input type="range" id="hcL" min="0" max="100" value="35" aria-label="Sound level">
           </div>
           <div class="field" id="hcBendF" hidden>
             <div class="field-head"><span class="field-label">Bend the bundle</span><span class="field-value" id="hcBv">upright</span></div>
             <input type="range" id="hcB" min="-100" max="100" value="0" aria-label="Bend the hair bundle">
           </div>
-          <label class="switch danger"><input type="checkbox" id="hcDmg"><span class="track"></span><span class="sw-text">Noise damage<small>splayed hairs and broken tip links</small></span></label>
+          <div class="field">
+            <div class="field-head"><span class="field-label">Outer hair cell damage</span><span class="field-value" id="hcOv">none</span></div>
+            <input type="range" id="hcO" min="0" max="100" value="0" aria-label="Outer hair cell damage">
+          </div>
+          <label class="switch danger"><input type="checkbox" id="hcDmg"><span class="track"></span><span class="sw-text">Inner hair cell damage<small>splayed hairs and broken tip links</small></span></label>
         </div>
         <div class="readout">
+          <div>Outer hair cell boost<b id="hcBoost">+40 dB</b><small class="readout-sub" id="hcOState"></small></div>
           <div>Gates open<b id="hcOpen">12%</b></div>
           <div>Nerve impulses<b id="hcRate">40 per second</b></div>
           <div>Cell state<b id="hcState" style="font-size:var(--fs-2)">resting</b></div>
         </div>
       </div>
-      <div class="lab-foot">The motion is slowed down about 1,000 times so you can follow it. In a real ear this happens up to 20,000 times a second.</div>
+      <div class="lab-foot">Try a soft sound, then raise the outer hair cell damage: the inner hair cell stops responding. Loud sounds still get through, because they barely need the boost. The motion is slowed down about 1,000 times; in a real ear this happens up to 20,000 times a second.</div>
     </div>
   </section>
 
@@ -4290,17 +4324,21 @@ Pages['learn/haircells'] = (main) => {
     <h2>Two kinds of hair cell, two different jobs</h2>
     <div class="keypoints">
       <div class="keypoint" style="border-top:3px solid var(--f-high)"><b>Inner hair cells: the sensors</b><span>About 3,500 in a single row. They do the actual listening: around 95% of the nerve fibres going to the brain connect to them.</span></div>
-      <div class="keypoint" style="border-top:3px solid var(--f-mid)"><b>Outer hair cells: the amplifiers</b><span>About 12,000 in three rows. They physically stretch and shrink in time with the sound, pumping energy back into the membrane. This boosts soft sounds by up to 50 dB and sharpens pitch.</span></div>
+      <div class="keypoint" style="border-top:3px solid var(--f-mid)"><b>Outer hair cells: the amplifiers</b><span>About 12,000 in three rows. They stretch and shrink in time with the sound, pumping energy back into the membrane. They give the quietest sounds a boost of up to 50 dB but add almost nothing to loud sounds, which squeezes a huge range of loudness into what the inner hair cells can handle.</span></div>
     </div>
     <div class="callout" style="--c:#6C5CF0"><b>The fragile part.</b> Outer hair cells work the hardest and are the first to die from loud noise, ageing and some medicines. Without them, soft sounds disappear and pitches blur together. In humans, lost hair cells never grow back. Birds and fish can regrow theirs, and researchers are studying how.</div>
   </section>`);
   mountChapterRail(main, 'haircells');
 
-  let mode = 'auto', level = 55, bend = 0, dmg = false, open = 0.12, depol = 0;
+  let mode = 'auto', level = 35, bend = 0, dmg = false, ohcDmg = 0, open = 0.12, depol = 0, boostNow = 0;
   const ions = [], spikes = [];
   let spikeAcc = 0;
-  const lvTxt = v => v < 10 ? 'silence' : v < 35 ? 'soft' : v < 70 ? 'moderate' : 'loud';
+  const lvTxt = v => v < 5 ? T('silence') : v + ' dB, ' + (v < 35 ? 'soft' : v < 65 ? 'moderate' : v < 85 ? 'loud' : 'very loud');
   bindRange($('#hcL', main), v => { level = v; $('#hcLv', main).textContent = lvTxt(v); });
+  $('#hcLv', main).textContent = lvTxt(level);
+  // Outer hair cells are a compressive amplifier: up to ~45 dB of boost for the softest sounds, almost none for loud ones.
+  const OHC_MAX = 45, ohcGain = L => L < 3 ? 0 : OHC_MAX / (1 + Math.exp((L - 45) / 11));
+  bindRange($('#hcO', main), v => { ohcDmg = v / 100; $('#hcOv', main).textContent = v < 3 ? T('none') : v + ' %'; });
   bindRange($('#hcB', main), v => { bend = v / 100; $('#hcBv', main).textContent = Math.abs(v) < 8 ? 'upright' : v > 0 ? 'toward the tallest hair' : 'toward the shortest hair'; });
   bindSeg($('#hcMode', main), v => { mode = v; $('#hcLevelF', main).hidden = v !== 'auto'; $('#hcBendF', main).hidden = v === 'auto'; });
   $('#hcDmg', main).addEventListener('change', e => { dmg = e.target.checked; });
@@ -4309,12 +4347,20 @@ Pages['learn/haircells'] = (main) => {
   const lab = $('.mini-sim', main); lab.classList.add('live');
 
   const stop = loop((dt, t) => {
-    const theta = mode === 'auto' ? (level / 100) * 0.32 * (REDUCED_MOTION ? 0.6 : Math.sin(t * Math.PI * 2 * 0.55)) : bend * 0.32;
+    const wave = REDUCED_MOTION ? 0.6 : Math.sin(t * Math.PI * 2 * 0.55);
+    const L = mode === 'auto' ? level : Math.abs(bend) * 100;
+    const boost = ohcGain(L) * (1 - ohcDmg);
+    boostNow = smooth(boostNow, boost, 1 - Math.exp(-dt * 8));
+    // what the inner hair cell feels: the sound plus the outer hair cells' boost (inner hair cells alone need ~25 dB)
+    const drive = clamp((L + boost - 25) / 75);
+    const theta = mode === 'auto' ? drive * 0.32 * wave : bend * 0.32 * (0.3 + 0.7 * drive / Math.max(0.05, clamp((L + ohcGain(L) - 25) / 75)));
     const pTarget = dmg ? 0.01 : 1 / (1 + Math.exp(-(theta - 0.05) / 0.045));
     open = smooth(open, pTarget, 1 - Math.exp(-dt * 20));
     depol = smooth(depol, open, 1 - Math.exp(-dt * 6));
     const rate = dmg ? 0 : Math.round(5 + 300 * clamp((open - 0.1) / 0.9) + 35 * clamp(1 - Math.abs(open - 0.12) * 8));
     $('#hcOpen', main).textContent = Math.round(open * 100) + '%';
+    $('#hcBoost', main).textContent = L < 3 ? '–' : '+' + Math.round(boostNow) + ' dB';
+    $('#hcOState', main).textContent = T(ohcDmg > 0.9 ? 'damaged: no longer pumps' : ohcDmg > 0.35 && L >= 3 && ohcGain(L) > 6 ? 'damaged: weak boost' : L < 3 ? 'waiting for sound' : boostNow > 22 ? 'working hard for a soft sound' : boostNow > 6 ? 'adding a medium boost' : 'loud sound: barely needed');
     $('#hcRate', main).textContent = rate + ' per second';
     $('#hcState', main).textContent = dmg ? 'silent, gates broken' : open > 0.3 ? 'excited, sending signals' : open < 0.06 ? 'quieted' : 'resting, ticking over';
 
@@ -4404,29 +4450,45 @@ Pages['learn/haircells'] = (main) => {
 
     // ---- outer hair cell ----
     ctx.strokeStyle = 'rgba(236,234,248,0.12)'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(500, 40); ctx.lineTo(500, 360); ctx.stroke();
+    // boost-by-level chart
+    { const gx = 530, gw = 205, gy = 40, gh = 74;
+      const X = v => gx + v / 100 * gw, Y = db => gy + gh - db / OHC_MAX * gh;
+      ctx.fillStyle = 'rgba(200,198,232,0.85)'; ctx.font = '600 11.5px ' + UIFONT; ctx.textAlign = 'left'; ctx.fillText('Boost by sound level', gx, gy - 14);
+      ctx.strokeStyle = 'rgba(236,234,248,0.18)'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(gx, gy); ctx.lineTo(gx, gy + gh); ctx.lineTo(gx + gw, gy + gh); ctx.stroke();
+      const curve = (k, col, w, dash) => { ctx.beginPath(); for (let v = 0; v <= 100; v += 2) { const yy = Y(ohcGain(v) * k); v ? ctx.lineTo(X(v), yy) : ctx.moveTo(X(v), yy); } ctx.strokeStyle = col; ctx.lineWidth = w; ctx.setLineDash(dash || []); ctx.stroke(); ctx.setLineDash([]); };
+      if (ohcDmg > 0.02) curve(1, 'rgba(236,234,248,0.35)', 1.5, [3, 3]);
+      curve(1 - ohcDmg, 'rgba(232,93,117,0.95)', 2.2);
+      if (L >= 3) { ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(X(L), Y(boost), 4.5, 0, 7); ctx.fill(); }
+      ctx.fillStyle = 'rgba(200,198,232,0.6)'; ctx.font = '500 10.5px ' + UIFONT;
+      ctx.textAlign = 'left'; ctx.fillText('soft', gx, gy + gh + 12); ctx.textAlign = 'right'; ctx.fillText('loud', gx + gw, gy + gh + 12);
+      ctx.textAlign = 'right'; ctx.fillText('+' + OHC_MAX + ' dB', gx + gw, gy + 2); }
     const ocx = 630, base = 340;
-    const motion = dmg ? 0 : (open - 0.12);
-    const len = 165 * (1 - 0.18 * motion);
+    const work = clamp(boostNow / OHC_MAX);                  // how hard the amplifier is working
+    const motion = (REDUCED_MOTION ? 0.5 : wave) * work;      // length change follows the sound, scaled by its boost
+    const len = 150 * (1 - 0.16 * motion);
     const otop = base - len;
-    const oc = dmg ? DAMAGE_RGB : [232, 93, 117];
+    const oc = mixRGB([232, 93, 117], DAMAGE_RGB, ohcDmg);
     rr(ctx, ocx - 30, otop, 60, len, 26);
-    ctx.fillStyle = rgba(oc, 0.15 + 0.3 * clamp(depol)); ctx.fill(); ctx.strokeStyle = rgba(oc, 0.9); ctx.lineWidth = 2; ctx.stroke();
+    ctx.fillStyle = rgba(oc, 0.12 + 0.55 * work); ctx.fill(); ctx.strokeStyle = rgba(oc, 0.9); ctx.lineWidth = 2; ctx.stroke();
     for (let k = 0; k < 7; k++) {
       const yy = otop + 20 + k * (len - 40) / 6;
-      ctx.fillStyle = rgba(oc, 0.5 + 0.5 * clamp(Math.abs(motion) * 3));
+      const alive = k / 7 >= ohcDmg;                           // motor proteins switch off as damage grows
+      ctx.fillStyle = alive ? rgba(oc, 0.35 + 0.65 * work) : rgba(DAMAGE_RGB, 0.35);
       ctx.beginPath(); ctx.arc(ocx - 30, yy, 3, 0, 7); ctx.arc(ocx + 30, yy, 3, 0, 7); ctx.fill();
     }
+    const broken = Math.round(ohcDmg * 3);
     [-18, 0, 18].forEach((d, i) => {
-      const a = dmg ? splay[i + 1] : theta, hh = [26, 36, 46][i];
-      ctx.strokeStyle = rgba(dmg ? DAMAGE_RGB : [236, 234, 248], 0.95); ctx.lineWidth = 6; ctx.lineCap = 'round';
+      const isBroken = i < broken, hh = [26, 36, 46][i] * (isBroken ? 0.45 : 1);
+      const a = isBroken ? splay[i + 1] : theta;
+      ctx.strokeStyle = rgba(isBroken ? DAMAGE_RGB : [236, 234, 248], 0.95); ctx.lineWidth = 6; ctx.lineCap = 'round';
       ctx.beginPath(); ctx.moveTo(ocx + d, otop + 2); ctx.lineTo(ocx + d + Math.sin(a) * hh, otop + 2 - Math.cos(a) * hh); ctx.stroke();
     });
-    ctx.fillStyle = rgba(oc, 0.95); ctx.textAlign = 'center';
+    // energy pumped back into the membrane
+    if (work > 0.05 && !REDUCED_MOTION) {
+      for (let k = 0; k < 3; k++) { const ph = ((t * 1.1) + k / 3) % 1; ctx.strokeStyle = rgba([232, 93, 117], 0.5 * work * (1 - ph)); ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(ocx, otop - 8, 14 + ph * 34, Math.PI * 1.15, Math.PI * 1.85); ctx.stroke(); }
+    }
+    ctx.fillStyle = rgba(oc, 0.95); ctx.textAlign = 'center'; ctx.font = '600 12.5px ' + UIFONT;
     ctx.fillText('outer hair cell', ocx, base + 32);
-    ctx.fillStyle = 'rgba(236,234,248,0.7)'; ctx.font = '500 11.5px ' + UIFONT;
-    ctx.fillText(dmg ? 'damaged: no longer pumps' : 'shrinks and stretches,', ocx, 60);
-    if (!dmg) ctx.fillText('pushing the membrane harder', ocx, 76);
-    // supporting cell under the outer hair cell
     ctx.fillStyle = 'rgba(236,234,248,0.08)'; rr(ctx, ocx - 40, base, 80, 16, 6); ctx.fill();
     ctx.restore();
   }, $('#hcCanvas', main));
@@ -4609,7 +4671,7 @@ Pages['learn/brain'] = (main) => {
 const LAYER_EXPLAIN = [
   ['Sound arriving', 'var(--f-low)', 'How much energy each pitch carries when it reaches the ear. This is the raw sound, before your ear does anything with it.'],
   ['Basilar membrane', 'var(--f-mid)', 'The ribbon inside the cochlea. Each pitch makes it ripple most at one spot, so the sound is sorted from low (left) to high (right).'],
-  ['Outer hair cells', 'var(--f-mid)', 'Three rows of amplifiers. They pump energy into the ripple so soft sounds become big enough to detect. Lose them and quiet sounds vanish.'],
+  ['Outer hair cells', 'var(--f-mid)', 'Three rows of amplifiers. They pump energy into the ripple so soft sounds become big enough to detect, which is why they light up most for quiet sounds and step back for loud ones. Lose them and quiet sounds vanish.'],
   ['Inner hair cells', 'var(--f-high)', 'The real sensors. When their hairs bend they release a chemical signal. Where they are missing, no amount of volume gets through.'],
   ['Nerve fibres', 'var(--f-top)', 'Each dot is one nerve impulse heading to the brain. Busy fibres mean a loud sound at that pitch. Dashed fibres have lost their connection.'],
   ['What reaches the brain', 'var(--f-top)', 'The final picture the brain works with. The dashed outlines show what arrived at the ear, so any gap between the two is sound that was lost.']
